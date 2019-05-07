@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Lagu</string>
+    <string name="search">Find</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="calendar">Calendar</string>
+    <string name="create">Create</string>
+    <string name="logout">Logout</string>
+    <string name="back">Back</string>
+    <string name="google_login">Google</string>
+    <string name="facebook_login">Facebook</string>
 </resources>

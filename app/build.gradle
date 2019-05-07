@@ -1,12 +1,13 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.hendri.lagu.lagu"
+        applicationId "com.hendri.lagu"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
@@ -19,6 +20,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    dataBinding {
+        enabled = true;
+    }
     realm {
         syncEnabled = true
     }
@@ -28,8 +32,21 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.android.support:appcompat-v7:$androidsupport_version"
+    implementation "com.android.support:animated-vector-drawable:$androidsupport_version"
+    implementation "com.android.support:support-media-compat:$androidsupport_version"
+    implementation "com.android.support:design:$androidsupport_version"
     implementation "com.android.support.constraint:constraint-layout:$constraintlayout_version"
+    implementation "com.google.firebase:firebase-core:$firebase_version"
+    implementation "com.google.firebase:firebase-auth:$firebase_version"
+    implementation "com.kaopiz:kprogresshud:$kprogresshud_version"
+
+    //play service auth
+    implementation "com.google.android.gms:play-services-auth:$playservice_version"
+    implementation "org.jetbrains.anko:anko-commons:$anko_version"
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
+
+apply plugin: 'com.google.gms.google-services'

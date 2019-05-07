@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_navigation_search"
+        android:title="@string/search" />
+
+    <item
+        android:id="@+id/bottom_navigation_wishlist"
+        android:title="@string/wishlist" />
+
+    <item
+        android:id="@+id/bottom_navigation_calendar"
+        android:title="@string/calendar" />
+
+    <item
+        android:id="@+id/bottom_navigation_create"
+        android:title="@string/create" />
+
+    <item
+        android:id="@+id/bottom_navigation_logout"
+        android:title="@string/logout" />
+</menu>

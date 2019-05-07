@@ -6,6 +6,11 @@ buildscript {
         realm_version = '5.7.0'
         constraintlayout_version = '1.1.3'
         androidsupport_version = '28.0.0'
+        googleservice_version = '4.0.1'
+        firebase_version = '16.0.4'
+        playservice_version = '16.0.1'
+        anko_version = '0.10.8'
+        kprogresshud_version = '1.2.0'
     }
     repositories {
         google()
@@ -15,6 +20,7 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.2.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "io.realm:realm-gradle-plugin:$realm_version"
+        classpath "com.google.gms:google-services:$googleservice_version"
 
 
         // NOTE: Do not place your application dependencies here; they belong
