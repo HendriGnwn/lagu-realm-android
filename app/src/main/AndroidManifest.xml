@@ -30,6 +30,12 @@
             android:name=".activities.MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".activities.CalendarDetailActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.LightToolbar"/>
         <activity android:name=".activities.LoginActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

@@ -3,7 +3,7 @@
 
     <data>
         <variable name="appTitle" type="String" />
-        <variable name="isBackButton" type="Integer" />
+        <variable name="account" type="String" />
     </data>
 
     <android.support.design.widget.AppBarLayout
@@ -17,14 +17,16 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <android.support.v7.widget.AppCompatImageButton
-                        android:visibility="@{isBackButton}"
-                        android:text="@string/back"
-                        android:padding="@dimen/button_toolbar"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
                 <TextView
+                    android:id="@+id/textAppTitle"
                     android:text="@{appTitle}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="@{account}"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RelativeLayout>

@@ -11,6 +11,8 @@ buildscript {
         playservice_version = '16.0.1'
         anko_version = '0.10.8'
         kprogresshud_version = '1.2.0'
+        retrofit_version = '2.3.0'
+        rxjava2_version = '2.0.1'
     }
     repositories {
         google()

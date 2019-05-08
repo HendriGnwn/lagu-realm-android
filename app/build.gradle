@@ -39,6 +39,10 @@ dependencies {
     implementation "com.google.firebase:firebase-core:$firebase_version"
     implementation "com.google.firebase:firebase-auth:$firebase_version"
     implementation "com.kaopiz:kprogresshud:$kprogresshud_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxjava2_version"
 
     //play service auth
     implementation "com.google.android.gms:play-services-auth:$playservice_version"

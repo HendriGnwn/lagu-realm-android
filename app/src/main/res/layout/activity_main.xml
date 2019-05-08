@@ -6,7 +6,7 @@
 
     <data>
         <variable name="appTitle" type="String" />
-        <variable name="isBackButton" type="Integer" />
+        <variable name="account" type="String" />
     </data>
 
     <android.support.design.widget.CoordinatorLayout
@@ -16,7 +16,7 @@
         android:layout_height="match_parent"
         tools:context=".activities.MainActivity">
 
-        <include layout="@layout/appbar_layout" tools:appTitle="@{appTitle}" tools:isBackButton="@{isBackButton}" />
+        <include layout="@layout/appbar_layout" tools:appTitle="@{appTitle}" tools:account="@{account}" />
 
         <android.support.v4.widget.NestedScrollView
             android:id="@+id/nestedScrollView"
@@ -36,6 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorWhite"
+            android:theme="@style/AppTheme"
             app:layout_anchorGravity="bottom"
             android:layout_gravity="bottom"
             app:menu="@menu/bottom_navigation"

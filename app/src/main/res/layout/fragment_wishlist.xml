@@ -13,13 +13,11 @@
 
     <requestFocus />
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="@string/wishlist"
-        android:textColor="@android:color/primary_text_light"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0dp"
+        android:scrollbars="none"
+        android:nestedScrollingEnabled="false"/>
 </LinearLayout>

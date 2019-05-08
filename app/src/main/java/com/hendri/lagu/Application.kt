@@ -21,7 +21,7 @@ class Application : BaseApplication() {
         super.onCreate()
         FirebaseApp.initializeApp(this)
         Realm.init(this)
-        val config = RealmConfiguration.Builder().name("hendri_lagu.realm").build()
+        val config = RealmConfiguration.Builder().name("hendrilagu.realm").build()
         Realm.setDefaultConfiguration(config)
     }
 

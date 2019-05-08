@@ -36,7 +36,13 @@ class LoginActivity : BaseActivity() {
             val signInIntent: Intent = mGoogleSignInClient.signInIntent
             startActivityForResult(signInIntent, RC_SIGN_IN)
         }
+
+        guestButton.setOnClickListener {
+            doGuestLogin()
+        }
     }
+
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -73,6 +79,28 @@ class LoginActivity : BaseActivity() {
             finish()
         } else {
             Toast.makeText(this, "Google sign in failed", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    fun doGuestLogin() {
+        val user : User? = realm.where<User>().findFirst()
+        if (user != null) {
+
+            realm.executeTransaction {
+
+                user.isLogin = true
+                user.token = ""
+                user.uniqueId = "guest1997"
+                user.fullName = "Guest"
+                user.email = "guest@guest.com"
+                user.photoUrl = ""
+
+            }
+
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        } else {
+            Toast.makeText(this, "Guest sign in failed", Toast.LENGTH_LONG).show()
         }
     }
 }

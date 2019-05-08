@@ -11,9 +11,13 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.hendri.lagu.R
+import com.hendri.lagu.models.ArtistDetail
+import com.hendri.lagu.models.Event
 import com.hendri.lagu.models.User
+import com.hendri.lagu.models.Wishlist
 import com.kaopiz.kprogresshud.KProgressHUD
 import io.realm.Realm
+import io.realm.kotlin.createObject
 import io.realm.kotlin.where
 import org.jetbrains.anko.indeterminateProgressDialog
 
@@ -34,7 +38,6 @@ open class BaseActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         realm.close()
-
     }
 
     fun initialize() {
@@ -46,7 +49,6 @@ open class BaseActivity : AppCompatActivity() {
             .setDimAmount(0.1f)
             .setAnimationSpeed(1)
 
-//        firebaseAuth = FirebaseAuth.getInstance()
         mGoogleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail().build()
@@ -67,6 +69,8 @@ open class BaseActivity : AppCompatActivity() {
 
     fun unsetRealm() {
         val user = realm.where<User>().findFirst()!!
+        var wishlists = realm.where<Wishlist>().findAll()!!
+        var events = realm.where<Event>().findAll()!!
         realm.executeTransaction { _ ->
             user.isLogin = false
             user.token = ""
@@ -74,6 +78,9 @@ open class BaseActivity : AppCompatActivity() {
             user.email = ""
             user.fullName = ""
             user.photoUrl = ""
+
+            wishlists.deleteAllFromRealm()
+            events.deleteAllFromRealm()
         }
     }
 
@@ -82,7 +89,7 @@ open class BaseActivity : AppCompatActivity() {
         mGoogleSignInClient.signOut().addOnCompleteListener(this) {
             unsetRealm()
             hideProgress()
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, SplashActivity::class.java))
             finish()
         }
     }

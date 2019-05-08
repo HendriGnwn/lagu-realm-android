@@ -2,21 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/bottom_navigation_search"
+        android:icon="@android:drawable/ic_menu_search"
         android:title="@string/search" />
 
     <item
         android:id="@+id/bottom_navigation_wishlist"
+        android:icon="@android:drawable/ic_menu_set_as"
         android:title="@string/wishlist" />
 
     <item
         android:id="@+id/bottom_navigation_calendar"
+        android:icon="@android:drawable/ic_menu_my_calendar"
         android:title="@string/calendar" />
 
     <item
         android:id="@+id/bottom_navigation_create"
+        android:icon="@android:drawable/ic_menu_add"
         android:title="@string/create" />
 
     <item
         android:id="@+id/bottom_navigation_logout"
+        android:icon="@android:drawable/ic_lock_lock"
         android:title="@string/logout" />
 </menu>

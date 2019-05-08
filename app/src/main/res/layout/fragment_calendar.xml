@@ -13,13 +13,9 @@
 
     <requestFocus />
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="@string/calendar"
-        android:textColor="@android:color/primary_text_light"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite" />
 </LinearLayout>
