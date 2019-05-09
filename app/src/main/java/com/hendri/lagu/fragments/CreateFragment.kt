@@ -2,8 +2,10 @@ package com.hendri.lagu.fragments
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.os.Build
 import java.util.*
 import android.os.Bundle
+import android.support.annotation.RequiresApi
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -109,14 +111,18 @@ class CreateFragment : BaseFragment() {
                 mActivity.realm.executeTransaction { _ ->
                     val id = mActivity.getPrimaryKeyEvent()
                     val event = mActivity.realm.createObject<Event>(id)
-                    val datetime = editTextDate.text.toString().split(" ")
+                    val datetime = date.split(" ")
 
-                    event.name = editTextName.text.toString()
+                    event.name = name
                     event.date = datetime[0]
                     event.time = datetime[1]
 
+                    mActivity.doScheduleEventNotification(event)
+
                     editTextName.setText("")
                     editTextDate.setText("")
+
+                    mActivity.hideKeyboard()
                     Toast.makeText(context, "Event Successfully saved", Toast.LENGTH_LONG).show()
                 }
 

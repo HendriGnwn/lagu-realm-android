@@ -1,10 +1,12 @@
 package com.hendri.lagu.activities
 
 import android.app.ProgressDialog
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
+import android.view.inputmethod.InputMethodManager
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -92,5 +94,10 @@ open class BaseActivity : AppCompatActivity() {
             startActivity(Intent(this, SplashActivity::class.java))
             finish()
         }
+    }
+
+    fun hideKeyboard() {
+        val inputManager: InputMethodManager =getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputManager.hideSoftInputFromWindow(currentFocus.windowToken, InputMethodManager.SHOW_FORCED)
     }
 }

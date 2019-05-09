@@ -17,10 +17,13 @@ import com.hendri.lagu.fragments.WishlistFragment
 import com.hendri.lagu.models.ArtistDetail
 import com.hendri.lagu.models.Event
 import com.hendri.lagu.models.Wishlist
+import com.hendri.lagu.utils.NotificationUtil
 import io.realm.RealmResults
 import io.realm.kotlin.createObject
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_main.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 /**
  * Created by hendri on 07/05/19.
@@ -155,5 +158,11 @@ class MainActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelect
 
     fun checkSearchList() {
         searchFragment.checkRecordWishlist()
+    }
+
+    fun doScheduleEventNotification(event: Event) {
+        var simpleDateFormat = SimpleDateFormat("d/M/y k:m")
+        var notificationTime = simpleDateFormat.parse("${event.date} ${event.time}").time - (1800 * 1000)
+        NotificationUtil().setEventNotification(event.id, event.name, notificationTime, this)
     }
 }
