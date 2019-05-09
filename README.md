@@ -4,7 +4,7 @@
 @author Hendri Gunawan <hendri.gnw@gmail.com>
 ```
 
-#Features
+# Features
 - Sign in with Google
 - Find Artist
 - Wishlist Artist
