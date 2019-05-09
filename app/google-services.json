@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "336741832225",
+    "firebase_url": "https://lagu-realm.firebaseio.com",
+    "project_id": "lagu-realm",
+    "storage_bucket": "lagu-realm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336741832225:android:8673b3a24ed3abef",
+        "android_client_info": {
+          "package_name": "com.hendri.lagu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336741832225-vfkhgq0mskldoespmb2lvndalrcajvdi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hendri.lagu",
+            "certificate_hash": "9521894927d95f210fd19c6e736ef7b755aff570"
+          }
+        },
+        {
+          "client_id": "336741832225-sn66s0q2jjvaahfigu73l6i4iqv95vfi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRQeXV3eN8fxyCRyWmBaUiK3DK7IUoctc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336741832225-sn66s0q2jjvaahfigu73l6i4iqv95vfi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
