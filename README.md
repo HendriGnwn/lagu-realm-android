@@ -17,3 +17,8 @@
 - Firebase Authentication
 - Retrofit2
 - RxJava2
+- Realm Database
+
+# Requirements
+- Install Google Service Plugin
+- Install Kotlin Extension
