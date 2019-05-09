@@ -22,3 +22,7 @@
 # Requirements
 - Install Google Service Plugin
 - Install Kotlin Extension
+
+
+To test Sign In with Google is running well, please install the release version of app.
+[a link](https://github.com/HendriGnwn/lagu-realm-android/blob/master/app/release/app-release.apk)
