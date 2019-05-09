@@ -13,6 +13,8 @@
         <item name="colorPrimary">@color/colorGrey</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:titleTextStyle">@style/AppTheme.LightToolbar.TitleTextStyle</item>
+        <item name="android:textColorSecondary">@color/colorBlack</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -20,6 +22,12 @@
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+
+    <style
+        name="AppTheme.LightToolbar.TitleTextStyle"
+        parent ="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorBlack</item>
     </style>
 
 </resources>

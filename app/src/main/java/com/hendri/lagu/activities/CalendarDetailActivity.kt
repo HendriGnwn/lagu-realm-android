@@ -27,7 +27,6 @@ class CalendarDetailActivity : BaseActivity() {
 
         init()
 
-        titleColor = ContextCompat.getColor(this, R.color.colorBlack)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
